@@ -27,9 +27,11 @@ fun HomeScreen() {
         }
         AnimatedVisibility(showContent) {
             val greeting = remember { viewModel.getHelloWorldString() }
+            val connectionStatus = remember { viewModel.getConnectionStatusString() }
             Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 Image(painterResource(Res.drawable.compose_multiplatform), null)
                 Text("Compose: $greeting")
+                Text("Connection Status: $connectionStatus")
             }
         }
     }

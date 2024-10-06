@@ -9,6 +9,6 @@ expect val platformModule: Module
 
 val sharedModule = module {
     viewModel {
-        HomeViewModel(get())
+        HomeViewModel(get(), get())
     }
 }
